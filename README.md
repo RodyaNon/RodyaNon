@@ -12,7 +12,7 @@ public Result<Person> getProfile(@RequestParam("name") String name) {
             .blog("https://www.rodya.me") 
             .hobby("Read, pretend to be a literary youth.") 
             .idol("non")
-            .motto("Make object-oriented great again")
+            .motto("Make Object Oriented Great Again")
             .build(); 
         
         return Result.success(person); 
