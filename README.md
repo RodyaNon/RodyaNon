@@ -1,16 +1,22 @@
-## Hi there 👋
-
-<!--
-**RodyaNon/RodyaNon** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## Hi 👋
+```java
+@GetMapping("/profile") 
+public Result<Person> getProfile(@RequestParam("name") String name) { 
+    if (RODYA.equals(name)) { 
+        Person person = Person.builder() 
+            .name(RODYA) 
+            .age(25) 
+            .gender("boy") 
+            .job("Backend intern at Supcon") 
+            .skill("Java, Spring...") 
+            .blog("https://www.rodya.me") 
+            .hobby("Read, pretend to be a literary youth.") 
+            .idol("non") 
+            .build(); 
+        
+        return Result.success(person); 
+    } 
+    
+    return Result.error("Man!!! Don't you have a profile yourself?"); 
+}
+```
