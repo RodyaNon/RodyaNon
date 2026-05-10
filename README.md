@@ -11,7 +11,8 @@ public Result<Person> getProfile(@RequestParam("name") String name) {
             .skill("Java, Spring...") 
             .blog("https://www.rodya.me") 
             .hobby("Read, pretend to be a literary youth.") 
-            .idol("non") 
+            .idol("non")
+            .motto("Make object-oriented great again")
             .build(); 
         
         return Result.success(person); 
